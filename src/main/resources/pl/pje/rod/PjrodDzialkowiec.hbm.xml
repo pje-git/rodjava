@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 2013-09-03 23:49:34 by Hibernate Tools 3.2.1.GA -->
+<hibernate-mapping>
+  <class catalog="rod" name="pl.pje.hibernate.PjrodDzialkowiec" table="pjrod_dzialkowiec">
+    <id name="idDzialkowiec" type="java.lang.Integer">
+      <column name="id_dzialkowiec"/>
+      <generator class="identity"/>
+    </id>
+    <property name="idDzialka" type="int">
+      <column name="id_dzialka" not-null="true"/>
+    </property>
+    <property name="imie" type="string">
+      <column length="32" name="imie"/>
+    </property>
+    <property name="nazwisko" type="string">
+      <column length="64" name="nazwisko" not-null="true"/>
+    </property>
+    <property name="adrMiejscowosc" type="string">
+      <column length="64" name="adr_miejscowosc"/>
+    </property>
+    <property name="adrUlica" type="string">
+      <column length="64" name="adr_ulica"/>
+    </property>
+    <property name="adrNrbudynku" type="string">
+      <column length="10" name="adr_nrbudynku"/>
+    </property>
+    <property name="adrNrlokalu" type="string">
+      <column length="10" name="adr_nrlokalu"/>
+    </property>
+    <property name="telefon1" type="string">
+      <column length="30" name="telefon1"/>
+    </property>
+    <property name="telefon2" type="string">
+      <column length="30" name="telefon2"/>
+    </property>
+    <property name="email" type="string">
+      <column length="30" name="email"/>
+    </property>
+    <property name="info" type="string">
+      <column name="info"/>
+    </property>
+    <property name="aktywny" type="int">
+      <column name="aktywny" not-null="true"/>
+    </property>
+    <property name="aktywnyOd" type="int">
+      <column name="aktywny_od" not-null="true"/>
+    </property>
+    <property name="aktywnyDo" type="int">
+      <column name="aktywny_do" not-null="true"/>
+    </property>
+    <property name="created" type="int">
+      <column name="created" not-null="true"/>
+    </property>
+    <property name="lastMod" type="int">
+      <column name="last_mod" not-null="true"/>
+    </property>
+    <property name="whoMod" type="string">
+      <column length="128" name="who_mod"/>
+    </property>
+  </class>
+</hibernate-mapping>

@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 2013-09-03 23:49:34 by Hibernate Tools 3.2.1.GA -->
+<hibernate-mapping>
+  <class catalog="rod" name="pl.pje.hibernate.PjrodRezerwacja" table="pjrod_rezerwacja">
+    <id name="idRezerwacja" type="java.lang.Integer">
+      <column name="id_rezerwacja"/>
+      <generator class="identity"/>
+    </id>
+    <property name="idSala" type="int">
+      <column name="id_sala" not-null="true"/>
+    </property>
+    <property name="opis" type="string">
+      <column length="256" name="opis"/>
+    </property>
+    <property name="kto" type="string">
+      <column length="128" name="kto" not-null="true"/>
+    </property>
+    <property name="haslo" type="string">
+      <column length="128" name="haslo" not-null="true"/>
+    </property>
+    <property name="kontakt" type="string">
+      <column length="128" name="kontakt" not-null="true"/>
+    </property>
+    <property name="dataRezerwacji" type="int">
+      <column name="data_rezerwacji" not-null="true"/>
+    </property>
+    <property name="created" type="int">
+      <column name="created" not-null="true"/>
+    </property>
+    <property name="lastMod" type="int">
+      <column name="last_mod" not-null="true"/>
+    </property>
+    <property name="whoMod" type="string">
+      <column length="128" name="who_mod"/>
+    </property>
+  </class>
+</hibernate-mapping>

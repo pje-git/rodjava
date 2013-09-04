@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-configuration PUBLIC "-//Hibernate/Hibernate Configuration DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+  <session-factory>
+    <property name="hibernate.dialect">org.hibernate.dialect.MySQLDialect</property>
+    <property name="hibernate.connection.driver_class">com.mysql.jdbc.Driver</property>
+    <property name="hibernate.connection.url">jdbc:mysql://localhost:3306/rod?zeroDateTimeBehavior=convertToNull</property>
+    <property name="hibernate.connection.username">pawel</property>
+    <property name="hibernate.connection.password">pawel123</property>
+    <mapping resource="pl/pje/rod/PjrodDzialkowiec.hbm.xml"/>
+    <mapping resource="pl/pje/rod/PjrodLicznik.hbm.xml"/>
+    <mapping resource="pl/pje/rod/PjrodUlga.hbm.xml"/>
+    <mapping resource="pl/pje/rod/PjrodRezerwacja.hbm.xml"/>
+    <mapping resource="pl/pje/rod/PjrodSektor.hbm.xml"/>
+    <mapping resource="pl/pje/rod/PjrodFundusz.hbm.xml"/>
+    <mapping resource="pl/pje/rod/PjrodDzialka.hbm.xml"/>
+    <mapping resource="pl/pje/rod/PjrodFaktura.hbm.xml"/>
+    <mapping resource="pl/pje/rod/PjrodTaryfa.hbm.xml"/>
+    <mapping resource="pl/pje/rod/PjrodWplata.hbm.xml"/>
+    <mapping resource="pl/pje/rod/PjrodSala.hbm.xml"/>
+  </session-factory>
+</hibernate-configuration>
