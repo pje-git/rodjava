@@ -1,0 +1,39 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 2013-01-06 23:07:07 by Hibernate Tools 3.2.1.GA -->
+<hibernate-mapping>
+    <class name="pl.pje.jprogs.rod_entity.PjrodWplata" table="pjrod_wplata" catalog="dzialki">
+        <id name="idWplata" type="java.lang.Integer">
+            <column name="id_wplata" />
+            <generator class="identity" />
+        </id>
+        <property name="idDzialka" type="int">
+            <column name="id_dzialka" not-null="true" />
+        </property>
+        <property name="idFundusz" type="int">
+            <column name="id_fundusz" not-null="true" />
+        </property>
+        <property name="wplacajacy" type="string">
+            <column name="wplacajacy" length="256" />
+        </property>
+        <property name="operacja" type="string">
+            <column name="operacja" length="256" />
+        </property>
+        <property name="data" type="int">
+            <column name="data" not-null="true" />
+        </property>
+        <property name="kwota" type="int">
+            <column name="kwota" not-null="true" />
+        </property>
+        <property name="created" type="int">
+            <column name="created" not-null="true" />
+        </property>
+        <property name="lastMod" type="int">
+            <column name="last_mod" not-null="true" />
+        </property>
+        <property name="whoMod" type="string">
+            <column name="who_mod" length="128" />
+        </property>
+    </class>
+</hibernate-mapping>

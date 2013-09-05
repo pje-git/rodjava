@@ -1,0 +1,33 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 2013-01-06 23:07:07 by Hibernate Tools 3.2.1.GA -->
+<hibernate-mapping>
+    <class name="pl.pje.jprogs.rod_entity.PjrodLicznik" table="pjrod_licznik" catalog="dzialki">
+        <id name="idLicznik" type="java.lang.Integer">
+            <column name="id_licznik" />
+            <generator class="identity" />
+        </id>
+        <property name="numer" type="string">
+            <column name="numer" length="64" />
+        </property>
+        <property name="opis" type="string">
+            <column name="opis" length="128" />
+        </property>
+        <property name="stanPoczatkowy" type="int">
+            <column name="stan_poczatkowy" not-null="true" />
+        </property>
+        <property name="dataStanpocz" type="int">
+            <column name="data_stanpocz" not-null="true" />
+        </property>
+        <property name="created" type="int">
+            <column name="created" not-null="true" />
+        </property>
+        <property name="lastMod" type="int">
+            <column name="last_mod" not-null="true" />
+        </property>
+        <property name="whoMod" type="string">
+            <column name="who_mod" length="128" />
+        </property>
+    </class>
+</hibernate-mapping>

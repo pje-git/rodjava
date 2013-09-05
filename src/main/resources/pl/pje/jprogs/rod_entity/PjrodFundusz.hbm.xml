@@ -1,0 +1,45 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 2013-01-06 23:07:07 by Hibernate Tools 3.2.1.GA -->
+<hibernate-mapping>
+    <class name="pl.pje.jprogs.rod_entity.PjrodFundusz" table="pjrod_fundusz" catalog="dzialki">
+        <id name="idFundusz" type="java.lang.Integer">
+            <column name="id_fundusz" />
+            <generator class="identity" />
+        </id>
+        <property name="nazwaSkr" type="string">
+            <column name="nazwa_skr" length="32" not-null="true" />
+        </property>
+        <property name="nazwa" type="string">
+            <column name="nazwa" length="128" not-null="true" />
+        </property>
+        <property name="opis" type="string">
+            <column name="opis" length="256" />
+        </property>
+        <property name="kontoBank" type="string">
+            <column name="konto_bank" length="256" />
+        </property>
+        <property name="kontoZpk" type="string">
+            <column name="konto_zpk" length="32" />
+        </property>
+        <property name="kwota" type="int">
+            <column name="kwota" not-null="true" />
+        </property>
+        <property name="domyslny" type="int">
+            <column name="domyslny" not-null="true" />
+        </property>
+        <property name="dataOd" type="int">
+            <column name="data_od" not-null="true" />
+        </property>
+        <property name="created" type="int">
+            <column name="created" not-null="true" />
+        </property>
+        <property name="lastMod" type="int">
+            <column name="last_mod" not-null="true" />
+        </property>
+        <property name="whoMod" type="string">
+            <column name="who_mod" length="128" />
+        </property>
+    </class>
+</hibernate-mapping>

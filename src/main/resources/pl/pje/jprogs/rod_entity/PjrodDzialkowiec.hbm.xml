@@ -1,0 +1,63 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 2013-01-06 23:07:07 by Hibernate Tools 3.2.1.GA -->
+<hibernate-mapping>
+    <class name="pl.pje.jprogs.rod_entity.PjrodDzialkowiec" table="pjrod_dzialkowiec" catalog="dzialki">
+        <id name="idDzialkowiec" type="java.lang.Integer">
+            <column name="id_dzialkowiec" />
+            <generator class="identity" />
+        </id>
+        <property name="idDzialka" type="int">
+            <column name="id_dzialka" not-null="true" />
+        </property>
+        <property name="imie" type="string">
+            <column name="imie" length="32" />
+        </property>
+        <property name="nazwisko" type="string">
+            <column name="nazwisko" length="64" not-null="true" />
+        </property>
+        <property name="adrMiejscowosc" type="string">
+            <column name="adr_miejscowosc" length="64" />
+        </property>
+        <property name="adrUlica" type="string">
+            <column name="adr_ulica" length="64" />
+        </property>
+        <property name="adrNrbudynku" type="string">
+            <column name="adr_nrbudynku" length="10" />
+        </property>
+        <property name="adrNrlokalu" type="string">
+            <column name="adr_nrlokalu" length="10" />
+        </property>
+        <property name="telefon1" type="string">
+            <column name="telefon1" length="30" />
+        </property>
+        <property name="telefon2" type="string">
+            <column name="telefon2" length="30" />
+        </property>
+        <property name="email" type="string">
+            <column name="email" length="30" />
+        </property>
+        <property name="info" type="string">
+            <column name="info" />
+        </property>
+        <property name="aktywny" type="int">
+            <column name="aktywny" not-null="true" />
+        </property>
+        <property name="aktywnyOd" type="int">
+            <column name="aktywny_od" not-null="true" />
+        </property>
+        <property name="aktywnyDo" type="int">
+            <column name="aktywny_do" not-null="true" />
+        </property>
+        <property name="created" type="int">
+            <column name="created" not-null="true" />
+        </property>
+        <property name="lastMod" type="int">
+            <column name="last_mod" not-null="true" />
+        </property>
+        <property name="whoMod" type="string">
+            <column name="who_mod" length="128" />
+        </property>
+    </class>
+</hibernate-mapping>

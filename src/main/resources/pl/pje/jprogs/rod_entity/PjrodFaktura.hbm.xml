@@ -1,0 +1,51 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 2013-01-06 23:07:07 by Hibernate Tools 3.2.1.GA -->
+<hibernate-mapping>
+    <class name="pl.pje.jprogs.rod_entity.PjrodFaktura" table="pjrod_faktura" catalog="dzialki">
+        <id name="idFaktura" type="java.lang.Integer">
+            <column name="id_faktura" />
+            <generator class="identity" />
+        </id>
+        <property name="nrFak" type="string">
+            <column name="nr_fak" length="64" not-null="true" />
+        </property>
+        <property name="nrLicznika" type="int">
+            <column name="nr_licznika" not-null="true" />
+        </property>
+        <property name="opsPrzejsciowa" type="int">
+            <column name="ops_przejsciowa" not-null="true" />
+        </property>
+        <property name="opsPrzesyl" type="int">
+            <column name="ops_przesyl" not-null="true" />
+        </property>
+        <property name="opsDystrybucja" type="int">
+            <column name="ops_dystrybucja" not-null="true" />
+        </property>
+        <property name="opzEnergia" type="int">
+            <column name="opz_energia" not-null="true" />
+        </property>
+        <property name="opzSkljak" type="int">
+            <column name="opz_skljak" not-null="true" />
+        </property>
+        <property name="opzSieciowa" type="int">
+            <column name="opz_sieciowa" not-null="true" />
+        </property>
+        <property name="dataOd" type="int">
+            <column name="data_od" not-null="true" />
+        </property>
+        <property name="dataDo" type="int">
+            <column name="data_do" not-null="true" />
+        </property>
+        <property name="created" type="int">
+            <column name="created" not-null="true" />
+        </property>
+        <property name="lastMod" type="int">
+            <column name="last_mod" not-null="true" />
+        </property>
+        <property name="whoMod" type="string">
+            <column name="who_mod" length="128" />
+        </property>
+    </class>
+</hibernate-mapping>

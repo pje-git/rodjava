@@ -1,0 +1,48 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 2013-01-06 23:07:07 by Hibernate Tools 3.2.1.GA -->
+<hibernate-mapping>
+    <class name="pl.pje.jprogs.rod_entity.PjrodSektor" table="pjrod_sektor" catalog="dzialki">
+        <id name="idSektor" type="java.lang.Integer">
+            <column name="id_sektor" />
+            <generator class="identity" />
+        </id>
+        <property name="numer" type="int">
+            <column name="numer" not-null="true" />
+        </property>
+        <property name="idLicznikp" type="int">
+            <column name="id_licznikp" not-null="true" />
+        </property>
+        <property name="idLicznikw" type="int">
+            <column name="id_licznikw" not-null="true" />
+        </property>
+        <property name="metraz" type="int">
+            <column name="metraz" not-null="true" />
+        </property>
+        <property name="zabudowy" type="string">
+            <column name="zabudowy" length="256" />
+        </property>
+        <property name="problemy" type="string">
+            <column name="problemy" length="256" />
+        </property>
+        <property name="adres" type="string">
+            <column name="adres" length="256" />
+        </property>
+        <property name="gospodarz" type="string">
+            <column name="gospodarz" length="256" />
+        </property>
+        <property name="dozrobienia" type="string">
+            <column name="dozrobienia" length="65535" />
+        </property>
+        <property name="created" type="int">
+            <column name="created" not-null="true" />
+        </property>
+        <property name="lastMod" type="int">
+            <column name="last_mod" not-null="true" />
+        </property>
+        <property name="whoMod" type="string">
+            <column name="who_mod" length="128" />
+        </property>
+    </class>
+</hibernate-mapping>

@@ -1,0 +1,36 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 2013-01-06 23:07:07 by Hibernate Tools 3.2.1.GA -->
+<hibernate-mapping>
+    <class name="pl.pje.jprogs.rod_entity.PjrodUlga" table="pjrod_ulga" catalog="dzialki">
+        <id name="idUlga" type="java.lang.Integer">
+            <column name="id_ulga" />
+            <generator class="identity" />
+        </id>
+        <property name="nazwa" type="string">
+            <column name="nazwa" length="128" not-null="true" />
+        </property>
+        <property name="opis" type="string">
+            <column name="opis" length="256" />
+        </property>
+        <property name="typUlgi" type="int">
+            <column name="typ_ulgi" not-null="true" />
+        </property>
+        <property name="wartosc" type="int">
+            <column name="wartosc" not-null="true" />
+        </property>
+        <property name="dataOd" type="int">
+            <column name="data_od" not-null="true" />
+        </property>
+        <property name="created" type="int">
+            <column name="created" not-null="true" />
+        </property>
+        <property name="lastMod" type="int">
+            <column name="last_mod" not-null="true" />
+        </property>
+        <property name="whoMod" type="string">
+            <column name="who_mod" length="128" />
+        </property>
+    </class>
+</hibernate-mapping>
