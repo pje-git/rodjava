@@ -11,7 +11,6 @@ import java.awt.Font;
 import java.awt.GridLayout;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
-import java.lang.reflect.Array;
 import java.util.List;
 import java.util.Vector;
 import javax.swing.BorderFactory;
@@ -26,12 +25,11 @@ import javax.swing.JPopupMenu;
 import javax.swing.JScrollPane;
 import javax.swing.JTable;
 import javax.swing.JTextField;
-import javax.swing.border.EmptyBorder;
-import javax.swing.border.LineBorder;
 import javax.swing.table.DefaultTableModel;
 import org.hibernate.HibernateException;
 import org.hibernate.Query;
 import org.hibernate.Session;
+import org.hibernate.SessionFactory;
 import org.hibernate.Transaction;
 import pl.pje.jprogs.rod.HibernateUtil;
 import pl.pje.jprogs.rod_entity.PjrodDzialka;
@@ -193,7 +191,8 @@ public class EnergiaForm  extends javax.swing.JFrame {
     private List exeHQL_Dzialki(String hql) {
         List resultList = null;
         try {
-            Session hbs = HibernateUtil.getSessionFactory().openSession();
+            SessionFactory hbsf = HibernateUtil.getSessionFactory();
+            Session hbs = hbsf.openSession();
             Transaction hbt = hbs.beginTransaction();
             Query q = hbs.createQuery(hql);
             resultList = q.list();

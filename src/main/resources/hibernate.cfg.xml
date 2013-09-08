@@ -4,22 +4,21 @@
   <session-factory>
     <property name="hibernate.dialect">org.hibernate.dialect.MySQLDialect</property>
     <property name="hibernate.connection.driver_class">com.mysql.jdbc.Driver</property>
-    <property name="hibernate.connection.url">jdbc:mysql://localhost:3306/dzialki</property>
-    <property name="hibernate.connection.username">root</property>
-    <property name="hibernate.connection.password">milosc99.</property>
+    <property name="hibernate.connection.url">jdbc:mysql://localhost:3306/rod</property>
+    <property name="hibernate.connection.username">pawel</property>
+    <property name="hibernate.connection.password">pawel123</property>
     <property name="hibernate.show_sql">true</property>
-    <property name="hibernate.query.factory_class">org.hibernate.hql.internal.classic.ClassicQueryTranslatorFactory</property>
-    <!--<property name="hibernate.query.factory_class">org.hibernate.hql.classic.ClassicQueryTranslatorFactory</property>-->
-    <mapping resource="pl/pje/jprogs/rod_entity/PjrodFaktura.hbm.xml"/>
-    <mapping resource="pl/pje/jprogs/rod_entity/PjrodDzialka.hbm.xml"/>
+    <property name="hibernate.query.factory_class">org.hibernate.hql.classic.ClassicQueryTranslatorFactory</property>
     <mapping resource="pl/pje/jprogs/rod_entity/PjrodSala.hbm.xml"/>
-    <mapping resource="pl/pje/jprogs/rod_entity/PjrodTaryfa.hbm.xml"/>
-    <mapping resource="pl/pje/jprogs/rod_entity/PjrodUlga.hbm.xml"/>
-    <mapping resource="pl/pje/jprogs/rod_entity/PjrodSektor.hbm.xml"/>
-    <mapping resource="pl/pje/jprogs/rod_entity/PjrodWplata.hbm.xml"/>
-    <mapping resource="pl/pje/jprogs/rod_entity/PjrodDzialkowiec.hbm.xml"/>
+    <mapping resource="pl/pje/jprogs/rod_entity/PjrodLicznik.hbm.xml"/>
     <mapping resource="pl/pje/jprogs/rod_entity/PjrodFundusz.hbm.xml"/>
     <mapping resource="pl/pje/jprogs/rod_entity/PjrodRezerwacja.hbm.xml"/>
-    <mapping resource="pl/pje/jprogs/rod_entity/PjrodLicznik.hbm.xml"/>
+    <mapping resource="pl/pje/jprogs/rod_entity/PjrodWplata.hbm.xml"/>
+    <mapping resource="pl/pje/jprogs/rod_entity/PjrodUlga.hbm.xml"/>
+    <mapping resource="pl/pje/jprogs/rod_entity/PjrodFaktura.hbm.xml"/>
+    <mapping resource="pl/pje/jprogs/rod_entity/PjrodDzialka.hbm.xml"/>
+    <mapping resource="pl/pje/jprogs/rod_entity/PjrodSektor.hbm.xml"/>
+    <mapping resource="pl/pje/jprogs/rod_entity/PjrodDzialkowiec.hbm.xml"/>
+    <mapping resource="pl/pje/jprogs/rod_entity/PjrodTaryfa.hbm.xml"/>
   </session-factory>
 </hibernate-configuration>

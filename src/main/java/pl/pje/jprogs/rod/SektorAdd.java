@@ -9,7 +9,6 @@
 package pl.pje.jprogs.rod;
 
 import org.hibernate.HibernateException;
-import org.hibernate.Query;
 import org.hibernate.Session;
 import org.hibernate.Transaction;
 import pl.pje.jprogs.rod_entity.PjrodSektor;
@@ -175,6 +174,7 @@ public class SektorAdd extends javax.swing.JFrame {
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
+            @Override
             public void run() {
                 new SektorAdd().setVisible(true);
             }
