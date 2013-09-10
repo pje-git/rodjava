@@ -38,7 +38,9 @@ public class SektorAdd extends javax.swing.JFrame {
         jocTrayIcon1 = new com.xzq.osc.JocTrayIcon();
         jocTableCellRenderer1 = new com.xzq.osc.JocTableCellRenderer();
         jocPaneGroup1 = new com.xzq.osc.JocPaneGroup();
-        jocCoverPane1 = new com.xzq.osc.JocCoverPane();
+        jocInputMask1 = new com.xzq.osc.JocInputMask();
+        jocInputMask2 = new com.xzq.osc.JocInputMask();
+        jocCoverPane2 = new com.xzq.osc.JocCoverPane();
         jTextField1 = new javax.swing.JTextField();
         jTextField2 = new javax.swing.JTextField();
         jLabel1 = new javax.swing.JLabel();
@@ -47,7 +49,7 @@ public class SektorAdd extends javax.swing.JFrame {
         jocLabelEditor1 = new com.xzq.osc.JocLabelEditor();
         jScrollPane1 = new javax.swing.JScrollPane();
         jocCheckedList1 = new com.xzq.osc.JocCheckedList();
-        kal = new com.xzq.osc.JocGregCalendarPane();
+        jocLabelEditor2 = new com.xzq.osc.JocLabelEditor();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         getContentPane().setLayout(null);
@@ -112,10 +114,8 @@ public class SektorAdd extends javax.swing.JFrame {
 
         getContentPane().add(jScrollPane1);
         jScrollPane1.setBounds(10, 80, 70, 100);
-
-        kal.setBorder(javax.swing.BorderFactory.createEmptyBorder(1, 1, 1, 1));
-        getContentPane().add(kal);
-        kal.setBounds(180, 10, 210, 177);
+        getContentPane().add(jocLabelEditor2);
+        jocLabelEditor2.setBounds(150, 230, 79, 20);
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -142,7 +142,7 @@ public class SektorAdd extends javax.swing.JFrame {
 
     private void jocLabelEditor1KeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jocLabelEditor1KeyPressed
         // TODO add your handling code here:
-        
+
     }//GEN-LAST:event_jocLabelEditor1KeyPressed
 
     /**
@@ -188,11 +188,13 @@ public class SektorAdd extends javax.swing.JFrame {
     private javax.swing.JTextField jTextField1;
     private javax.swing.JTextField jTextField2;
     private com.xzq.osc.JocCheckedList jocCheckedList1;
-    private com.xzq.osc.JocCoverPane jocCoverPane1;
+    private com.xzq.osc.JocCoverPane jocCoverPane2;
+    private com.xzq.osc.JocInputMask jocInputMask1;
+    private com.xzq.osc.JocInputMask jocInputMask2;
     private com.xzq.osc.JocLabelEditor jocLabelEditor1;
+    private com.xzq.osc.JocLabelEditor jocLabelEditor2;
     private com.xzq.osc.JocPaneGroup jocPaneGroup1;
     private com.xzq.osc.JocTableCellRenderer jocTableCellRenderer1;
     private com.xzq.osc.JocTrayIcon jocTrayIcon1;
-    private com.xzq.osc.JocGregCalendarPane kal;
     // End of variables declaration//GEN-END:variables
 }
