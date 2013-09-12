@@ -9,6 +9,7 @@ import java.awt.Color;
 import java.awt.Component;
 import java.awt.Font;
 import java.awt.GridLayout;
+import java.awt.HeadlessException;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
 import java.util.List;
@@ -75,20 +76,7 @@ public class EnergiaForm  extends javax.swing.JFrame {
 
     public EnergiaForm(int left, int top, int width, int height, String title) {
 
-        JFrame frame = new JFrame(title);
-
-
-        frame.setBounds(left, top, width, height);
-        frame.setVisible(true);
-        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-
-        JPanel panel = setPanelLayout();
-        JPanel infoPanel = setInfoPanel();
-        JPanel buttonPanel = ustawButonPanel();
-        JPanel menuPanel = ustawMenu();
-        JScrollPane tabAll = setTable();
-
-        setLayout(panel, menuPanel, buttonPanel, tabAll, infoPanel, frame);
+        initComponents(title, left, top, width, height);
 
         displayResult(exeHQL_Dzialki(QUERY_DZIALKI));
 
@@ -141,6 +129,7 @@ public class EnergiaForm  extends javax.swing.JFrame {
         }
     }
 
+    @SuppressWarnings("empty-statement")
     private void initCentralPanel(JPanel infoPanel) {
         JPanel topInfoPanel = setPanelLayout();
 
@@ -198,7 +187,7 @@ public class EnergiaForm  extends javax.swing.JFrame {
             resultList = q.list();
             hbt.commit();
         } catch (HibernateException he) {
-            he.printStackTrace();
+//            he.printStackTrace();
         }
         return resultList;
     }
@@ -213,7 +202,7 @@ public class EnergiaForm  extends javax.swing.JFrame {
             result = q.uniqueResult();
             hbt.commit();
         } catch (HibernateException he) {
-            he.printStackTrace();
+//            he.printStackTrace();
         }
         return result;
     }
@@ -338,4 +327,21 @@ public class EnergiaForm  extends javax.swing.JFrame {
     private JTextField eDoZaplaty = new JTextField("Brak informacji");
     private PjrodDzialka dzialka = new PjrodDzialka();
     private final static JTable table = new JTable();
+
+    private void initComponents(String title, int left, int top, int width, int height) throws HeadlessException {
+        JFrame frame = new JFrame(title);
+
+
+        frame.setBounds(left, top, width, height);
+        frame.setVisible(true);
+        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+
+        JPanel panel = setPanelLayout();
+        JPanel infoPanel = setInfoPanel();
+        JPanel buttonPanel = ustawButonPanel();
+        JPanel menuPanel = ustawMenu();
+        JScrollPane tabAll = setTable();
+
+        setLayout(panel, menuPanel, buttonPanel, tabAll, infoPanel, frame);
+    }
 }
